@@ -15,12 +15,13 @@ body {
 }
 
 nav {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  scrollbar-width: none;
 }
 a {
   text-decoration: none;
@@ -30,10 +31,9 @@ a {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   overflow: auto;
-  padding: 0 40px;
 }
 .a-text {
   display: flex;
@@ -51,6 +51,7 @@ input {
 .input-wrap {
   border: 3px solid rgb(44, 51, 80);
   padding: 6px 0;
+  background-color: white;
   border-radius: 8px;
 }
 #search {
@@ -63,7 +64,7 @@ input {
   margin-left: 6px;
 }
 .logo {
-  margin-left: 80px;
+  margin-left: 50px;
 }
 .size {
   font-size: 27px;
@@ -75,8 +76,9 @@ p {
   font-weight: 400;
 }
 .my-text {
-  margin-left: 8%;
-  margin-top: 5%;
+  position: absolute;
+  top: 35%;
+  left: 7%;
 }
 h1 {
   margin-top: -20px;
@@ -86,17 +88,60 @@ h1 {
 }
 .btn {
   margin-top: 20px;
+  margin-left: 50px;
 }
 button {
   font-weight: 400;
   font-size: 18px;
   color: white;
-  padding: 10px;
+  padding: 10px 16px;
+  font-family: "Poppins", sans-serif;
   border: none;
   border-radius: 5px;
-  margin-left: 10px;
-  background-image: linear-gradient(to right, #1de2d1, purple);
+  margin-left: 12px;
+  transition: transform 0.15s;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #1de2d1, rgba(195, 70, 194, 0.7));
 }
-span {
+button:hover {
+  transform: scale(0.95);
+}
+.span {
   color: #1de2d1;
+  border-right: 4px solid #1de2d1;
+}
+.my-text-wrap {
+  overflow: hidden;
+}
+.img {
+  position: absolute;
+  z-index: -1;
+  height: 83%;
+  top: 47px;
+  right: 80px;
+}
+.icons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  right: 40px;
+  bottom: 120px;
+  gap: 10px;
+}
+.fab {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgb(44, 51, 80);
+  transition: opacity 0.15s;
+  opacity: 0.6;
+}
+.fab:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 600px) {
+  .input-wrap {
+    margin-left: 10px;
+  }
 }
