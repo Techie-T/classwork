@@ -71,6 +71,7 @@ input {
 }
 .size2 {
   font-size: 40px;
+  display: flex;
 }
 p {
   font-weight: 400;
@@ -101,7 +102,7 @@ button {
   margin-left: 12px;
   transition: transform 0.15s;
   cursor: pointer;
-  background-image: linear-gradient(to right, #1de2d1, rgba(195, 70, 194, 0.7));
+  background-image: linear-gradient(to right, #1de2d1, rgb(195, 70, 194));
 }
 button:hover {
   transform: scale(0.95);
@@ -109,7 +110,24 @@ button:hover {
 .span {
   color: #1de2d1;
   border-right: 4px solid #1de2d1;
+  margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 15ch;
+  animation: title-move 6s steps(16) infinite;
 }
+@keyframes title-move {
+  0% {
+    width: 0px;
+  }
+  25% {
+    width: 400px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
 .my-text-wrap {
   overflow: hidden;
 }
